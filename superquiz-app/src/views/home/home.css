@@ -1,0 +1,78 @@
+.main-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90%;
+  }
+
+.main-home .title{
+  font-size: 5.5rem;
+}
+
+.main-home .supaquiz-logo{
+  height: 150px;
+  width: 150px;
+}
+
+.main-home .github-logo{
+  height: 50px;
+  width: 50px;
+}
+
+.icon-brain{
+    height: 100px;
+    width: 100px;
+}
+
+  /*--------(Responsive)--------*/
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .main-home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 90%;
+      }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .main-home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 90%;
+      }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .main-home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 90%;
+      }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .main-home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 90%;
+      }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .main-home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 90%;
+      }
+}
+ 
+  

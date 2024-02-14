@@ -1,0 +1,13 @@
+header{
+    background-color: #1a1a1a;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.navbar-nav a{
+    color: white;
+    transition: color 0.7s ease;
+}
+
+.navbar-nav a:hover{
+    color: yellow;
+}
