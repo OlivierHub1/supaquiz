@@ -1,4 +1,15 @@
-img{
+.utilisateurs-img{
     height: 50px;
     width: 50px;
+}
+
+.bg-dark-trans{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 90.5%;
+}
+
+.utilisateurs:hover{
+    border-top: 2px solid #dadada;
+    border-bottom: 2px solid #dadada;
+    border-radius: 7px;
 }

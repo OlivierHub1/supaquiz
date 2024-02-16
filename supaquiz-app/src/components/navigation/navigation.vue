@@ -10,8 +10,9 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <RouterLink class="nav-item nav-link mx-2" to="/">Home</RouterLink>
-                        <RouterLink class="nav-item nav-link mx-2" to="/utilisateur">Utilisateur</RouterLink>
-                        <RouterLink class="nav-item nav-link mx-2" to="/quiz">Quiz</RouterLink>
+                        <RouterLink class="nav-item nav-link mx-2" to="/utilisateurs">Utilisateur</RouterLink>
+                        <RouterLink class="nav-item nav-link mx-2" to="/quizs">Quiz</RouterLink>
+                        <RouterLink class="nav-item nav-link mx-2" to="/questions">Question</RouterLink>
                     </div>
                 </div>
             </div>

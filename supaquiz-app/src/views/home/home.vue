@@ -9,7 +9,7 @@
           objectif principal est de fournir une plateforme interactive pour répondre à une variété de quiz. Grâce à son
           intégration avec Supabase, une solution de base de données et d'authentification, SupaQuiz offre une expérience
           utilisateur fluide et sécurisée. Les utilisateurs peuvent parcourir différents quiz, sélectionner ceux qui les
-          intéressent et répondre aux questions associées. </p>
+          intéressent et répondre aux questions associées pour obtenir des points.</p>
       </div>
     <div class="row my-2">
       <div class="col text-light text-center">
