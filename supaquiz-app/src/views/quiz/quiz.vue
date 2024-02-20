@@ -59,7 +59,7 @@ const goToQuizQuestions = (quizId) => {
   router.push({ name: 'quizQuestionsDetails', params: { quizId } })
 }
 
-// Function to fetch quizzes based on search term
+// Fonction qui permet de chercher un quiz
 async function rechercherQuiz() {
   try {
     loading.value = true;
@@ -67,7 +67,7 @@ async function rechercherQuiz() {
     if (paramUtilisateurId == null) {
       ({ data } = await supabase.from('Quiz').select().ilike('titre', `%${champRecherhcheQuiz.value}%`));
     } else {
-      ({ data } = await supabase.from('Quiz').select().eq('id_utilisateur', paramUtilisateurId).ilike('titre', `%${searchTerm.value}%`));
+      ({ data } = await supabase.from('Quiz').select().eq('id_utilisateur', paramUtilisateurId).ilike('titre', `%${champRecherhcheQuiz.value}%`));
     }
     quizs.value = data;
   } catch (error) {
@@ -97,7 +97,7 @@ async function getQuizs() {
   }
 }
 
-// Function to delete a quiz
+// Fonction qui permet de supprimer un quiz
 async function supprimerQuiz(quizId) {
   try {
     await supabase.from('Quiz').delete().eq('id', quizId);
