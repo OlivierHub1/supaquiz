@@ -3,10 +3,16 @@ import Home from '../views/home/home.vue'
 import Quiz from '../views/quiz/quiz.vue'
 import Utilisateur from '../views/utilisateur/utilisateur.vue'
 import Question from '../views/question/question.vue'
+import AjouterUtilisateur from '../views/option/ajouter/ajouterUtilisateur/ajouterUtilisateur.vue'
+import AjouterQuiz from '../views/option/ajouter/ajouterQuiz/ajouterQuiz.vue'
+import ModifierUilisateur from '../views/option/modifier/modifierUtilisateur/modifierUtilisateur.vue'
+import ModifierQuiz from '../views/option/modifier/modifierQuiz/modifierQuiz.vue'
+import ModifierQuestion from '../views/option/modifier/modifierQuestion/modifierQuestion.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    //Affichage
     {
       path: '/',
       name: 'home',
@@ -51,6 +57,33 @@ const router = createRouter({
       path: '/questions/:questionId',
       name: 'questionsDetails',
       component: Question
+    },
+    //Ajouter
+    {
+      path: '/ajouterUtilisateur',
+      name: 'ajouterUtilisateur',
+      component: AjouterUtilisateur
+    },
+    {
+      path: '/ajouterQuiz',
+      name: 'ajouterQuiz',
+      component: AjouterQuiz
+    },
+    //Modifier
+    {
+      path: '/modifierUtilisateur',
+      name: 'modifierUtilisateur',
+      component: ModifierUilisateur
+    },
+    {
+      path: '/modifierQuiz/:quizId',
+      name: 'modifierQuiz',
+      component: ModifierQuiz
+    },
+    {
+      path: '/modifierQuestion',
+      name: 'modifierQuestion',
+      component: ModifierQuestion
     }
   ]
 })

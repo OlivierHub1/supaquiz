@@ -1,4 +1,3 @@
-
 <template>
   <div class="">
     <div class="container d-flex justify-content-center">
@@ -10,7 +9,11 @@
         </div>
       </div>
     </div>
-    <table class="table table-dark">
+    <div class="d-flex justify-content-center align-items-center" style="height: 80vh;" v-if="loading">
+      <div class="spinner-border text-dark" role="status">
+      </div>
+    </div>
+    <table class="table table-dark" v-else>
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -21,18 +24,16 @@
           <th scope="col">Point</th>
         </tr>
       </thead>
-      <div class="d-flex justify-content-center align-items-center" v-if="loading">
-        <div class="spinner-border text-dark" role="status">
-        </div>
-      </div>
-      <tbody v-else>
-        <tr class="utilisateurs" v-for="utilisateur in utilisateurs" :key="utilisateur.id" @click="goToUtilisateurQuizs(utilisateur.id)">
-            <th scope="row">{{ utilisateur.id }}</th>
-            <td><img class="rounded-circle utilisateurs-img" :alt="'Image de ' + utilisateur.nom" :src="utilisateur.avatar" /></td>
-            <td>{{ utilisateur.pseudo }}</td>
-            <td>{{ utilisateur.nom }}</td>
-            <td>{{ utilisateur.prenom }}</td>
-            <td>{{ utilisateur.points }}</td>
+      <tbody>
+        <tr class="utilisateurs" v-for="utilisateur in utilisateurs" :key="utilisateur.id"
+          @click="goToUtilisateurQuizs(utilisateur.id)">
+          <th scope="row">{{ utilisateur.id }}</th>
+          <td><img class="rounded-circle utilisateurs-img" :alt="'Image de ' + utilisateur.nom"
+              :src="utilisateur.avatar" /></td>
+          <td>{{ utilisateur.pseudo }}</td>
+          <td>{{ utilisateur.nom }}</td>
+          <td>{{ utilisateur.prenom }}</td>
+          <td>{{ utilisateur.points }}</td>
         </tr>
       </tbody>
     </table>
