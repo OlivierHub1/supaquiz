@@ -13,7 +13,7 @@
       <div class="spinner-border text-dark" role="status">
       </div>
     </div>
-    <table class="table table-dark" v-else>
+    <table class="table table-dark" v-else-if="utilisateurs[0] != null">
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -27,7 +27,7 @@
       <tbody>
         <tr class="utilisateurs" v-for="utilisateur in utilisateurs" :key="utilisateur.id"
           @click="goToUtilisateurQuizs(utilisateur.id)">
-          <th scope="row">{{ utilisateur.id }}</th>
+          <th scope="row">{{ 0 }}</th>
           <td><img class="rounded-circle utilisateurs-img" :alt="'Image de ' + utilisateur.nom"
               :src="utilisateur.avatar" /></td>
           <td>{{ utilisateur.pseudo }}</td>
@@ -37,6 +37,13 @@
         </tr>
       </tbody>
     </table>
+    <div class="container d-flex justify-content-center align-items-center" style="height: 80vh;" v-else>
+      <div class="row bg-dark rounded d-felx align-items-center">
+          <p class="text-danger text-center my-2">
+            Vous n'avez pas accès aux données
+          </p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -58,6 +65,7 @@ async function getUtilisateurs() {
   try {
     const { data } = await supabase.from('Utilisateur').select()
     utilisateurs.value = data
+    console.log(utilisateurs[0] != null)
   } catch (error) {
     console.error('Error fetching data:', error.message)
   } finally {

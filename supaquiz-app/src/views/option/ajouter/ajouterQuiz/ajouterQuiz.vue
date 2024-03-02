@@ -102,7 +102,7 @@ async function insererQuiz(titre, description) {
 
         return data;
     } catch (error) {
-        console.error('Erreur lors de l\'insertion du Quiz :', error.message);
+        console.error('Erreur Quiz :', error.message);
         throw error;
     }
 }
@@ -120,7 +120,7 @@ async function insererQuestion(titre, id_quiz, reponses) {
 
         return data;
     } catch (error) {
-        console.error('Erreur lors de l\'insertion de la Question :', error.message);
+        console.error('Erreur Question :', error.message);
         throw error;
     }
 }
@@ -129,9 +129,7 @@ async function insererQuestion(titre, id_quiz, reponses) {
 async function submitFormQuiz() {
     try {
         const data = await insererQuiz(quizTitre.value, quizDescription.value);
-        // Réinitialiser les champs du formulaire si nécessaire
     } catch (error) {
-        // Gérer l'erreur
     }
 }
 
@@ -152,9 +150,7 @@ async function submitFormQuestion() {
         });
 
         const data = await insererQuestion(questionTitre.value, selectedQuiz.value, formattedReponses);
-        // Réinitialiser les champs du formulaire si nécessaire
     } catch (error) {
-        // Gérer l'erreur
     }
 }
 
