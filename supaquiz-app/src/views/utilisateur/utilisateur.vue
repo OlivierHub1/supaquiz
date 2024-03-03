@@ -39,9 +39,9 @@
     </table>
     <div class="container d-flex justify-content-center align-items-center" style="height: 80vh;" v-else>
       <div class="row bg-dark rounded d-felx align-items-center">
-          <p class="text-danger text-center my-2">
-            Vous n'avez pas accès aux données
-          </p>
+        <p class="text-danger text-center my-2">
+          Vous n'avez pas accès aux données
+        </p>
       </div>
     </div>
   </div>

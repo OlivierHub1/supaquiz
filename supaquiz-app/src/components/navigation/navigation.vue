@@ -21,6 +21,9 @@
               <li class="nav-item">
                 <RouterLink class=" nav-link mx-2" to="/questions">Question</RouterLink>
               </li>
+              <li class="nav-item">
+                <RouterLink class=" nav-link mx-2" to="/storage">Storage</RouterLink>
+              </li>
             </ul>
             <div class="d-flex">
               <RouterLink class="btn btn-outline-warning mx-2" to="/connexion">Login</RouterLink>

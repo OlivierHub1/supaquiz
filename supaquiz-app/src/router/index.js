@@ -13,6 +13,8 @@ import ModifierQuestion from '../views/option/modifier/modifierQuestion/modifier
 //Authentification
 import Inscription from '../views/authentification/inscription/inscription.vue'
 import Connexion from '../views/authentification/connexion/connexion.vue'
+//Storage
+import Storage from '../views/storage/storage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -100,6 +102,12 @@ const router = createRouter({
       path: '/connexion',
       name: 'connexion',
       component: Connexion
+    },
+    //Authentification
+    {
+      path: '/storage',
+      name: 'storage',
+      component: Storage
     }
   ]
 })
